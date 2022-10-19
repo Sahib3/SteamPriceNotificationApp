@@ -1,19 +1,17 @@
 import requests 
 from bs4 import BeautifulSoup
 from other import password
+from other import headers
 import smtplib,ssl
 
-price = 0.00
+
+
 email_pass = password
 
 urls = ['https://store.steampowered.com/app/1490890/Demon_Slayer_Kimetsu_no_Yaiba_The_Hinokami_Chronicles/',
-'https://store.steampowered.com/app/1091500/Cyberpunk_2077/'    
+'https://store.steampowered.com/app/1144200/Ready_or_Not/'    
         ]
 
-
-
-headers = {"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8", 
-    "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "en-US,en"}
 
 
 # scrape data from steam

@@ -9,7 +9,7 @@ import smtplib,ssl
 email_pass = password
 
 urls = ['https://store.steampowered.com/app/1490890/Demon_Slayer_Kimetsu_no_Yaiba_The_Hinokami_Chronicles/',
-'https://store.steampowered.com/app/1144200/Ready_or_Not/'    
+'https://store.steampowered.com/app/1144200/Ready_or_Not/'  
         ]
 
 
@@ -27,7 +27,7 @@ def scrape():
         try:
             sale_priceText = soup.find(class_="discount_final_price").get_text()
             sale_price = float(sale_priceText[5:])
-            #send_email(title,sale_price)
+            send_email(title,sale_price)
             print(sale_price)
         except:    
             org_priceText = soup.find(class_="game_purchase_price price").get_text().replace(' ','')
@@ -61,8 +61,6 @@ def send_email(title,sale_price):
 
 
         
-   
-
 
 scrape()
      
